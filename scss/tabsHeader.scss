@@ -1,0 +1,23 @@
+.tab-header {
+  flex-basis: 30%;
+  & > div {
+    width: 100%;
+    height: calc(100% / 4);
+  }
+  .active:before {
+    content: "";
+    width: 5px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    &:hover::before {
+      width: 100%;
+    }
+  }
+  .active p,
+  .active:hover p {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+}
