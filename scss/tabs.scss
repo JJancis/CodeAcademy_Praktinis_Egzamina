@@ -1,24 +1,7 @@
-.tabs {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 1000px;
-  min-width: 900px;
-  width: 80%;
-  height: 70%;
-  border-radius: 25px 0 0 25px;
-  background: $tabsBg;
-  overflow: hidden;
-  box-shadow: $shadow;
+#tabs {
   display: flex;
-
-  &::after {
-    content: "";
-    height: 100%;
-    width: 5px;
-    position: absolute;
-    background-image: $linearGradientViolet;
-    right: 0;
-  }
+  background-image: url(../images/christoffer-engstrom-503481-unsplash.png);
+  background-position: center;
+  background-size: cover;
+  height: 595px;
 }
