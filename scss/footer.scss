@@ -1,7 +1,29 @@
 footer {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  height: 124px;
   background: #1c1c1c;
-  color: white;
+  padding: 0 100px;
+  position: relative;
+  p {
+    position: absolute;
+    right: 150px;
+    font-size: 20px;
+    color: #ffffff;
+    opacity: 0.5;
+  }
+}
+
+.fa-solid,
+.fa-rss,
+.fa-brands {
+  font-size: 2em;
+  color: #e27866;
+  opacity: 0.653;
+}
+.footer-icons {
+  transform: scale(0.75);
+  display: flex;
+  gap: 80px;
+  padding: 20px 0;
 }

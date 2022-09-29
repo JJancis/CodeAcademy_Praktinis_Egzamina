@@ -5,19 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Praktinis egzaminas</title>
+
+    <!-- Fontawesome CSS  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Swiper css cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="app/css/style.css" />
   </head>
   <body>
     <nav>
-      <img src="app/images/cheshire-county-hygiene-services.svg" alt="logo" />
-      <a href="#">Features</a>
-      <a href="#">About</a>
-      <a href="#">Pricing</a>
-      <a href="#">Reviews</a>
-      <a href="#">Contact</a>
-    </nav>
-    <section id="hero-section">
+      <a class="brand" href="#hero-section"
+        ><img src="app/images/cheshire-county-hygiene-services.svg" alt="logo"
+      /></a>
       <div>
+        <a class="link" href="#hero-section">Features</a>
+        <a class="link" href="#about">About</a>
+        <a class="link" href="#pricing">Pricing</a>
+        <a class="link" href="#reviews">Reviews</a>
+        <a class="link" href="#contact">Contact</a>
+        <i id="burger" class="fa-solid fa-bars"></i>
+      </div>
+    </nav>
+
+    <section id="hero-section">
+      <div class="content">
         <img src="app/images/cheshire-county-hygiene-services.svg" alt="logo" />
         <h1>Explained propriety of out perpetual to you</h1>
         <img src="app/images/divider_white_u72.png" alt="" />
@@ -29,70 +50,64 @@
         </p>
         <button>Download</button>
       </div>
+
       <div class="container">
-        <div class="card">
-          <h1 class="card_title">Try Your <span> FREE</span> Trial Today</h1>
-          <p class="card_title-info">Your details</p>
-          <form class="card_form">
-            <div class="input">
-              <input
-                type="text"
-                class="input_field"
-                placeholder="First name
-              "
-                required
-              />
-            </div>
-            <div class="input">
-              <input
-                type="text"
-                class="input_field"
-                placeholder="Last name"
-                required
-              />
-            </div>
-            <div class="input">
-              <input
-                type="password"
-                class="input_field"
-                placeholder="Phone number"
-                required
-              />
-            </div>
-            <p>Type of subscription</p>
-            <div>
-              <input type="radio" />
-              <label for="">MONTHLY</label>
-              <input type="radio" />
-              <label for="">YEARLY</label>
-            </div>
-            <button>GET STARTED</button>
-          </form>
+        <h3>Try Your <span>FREE</span>  Trial Today</h3>
+     
+        <form action="#">    
+          <p>Your details</p>
+          <input type="text" class="name" placeholder="First name" title="Write here your first name" >
+          <input type="text" class="name" placeholder="Last name" title="Write here your last name" >
+          <input type="number" class="phone-number" placeholder="Phone number" title="Write here your phone number" >
+          <p>Type of subscription</p>
+          
+          <div> 
+            <input
+            class="radio-btn"
+          id="monthly"
+          type="radio"
+          value="monthly"
+          name="subscription"
+          checked
+        />
+        <label for="monthly">Monthly</label>
+
+        <input class="radio-btn" id="yearly" type="radio" value="yearly" name="subscription" />
+        <label for="yearly">Yearly</label>
         </div>
-      </div>
+         
+        
+        </form>
+         <input type="submit" class="form-submit" value="GET STARTED" required>
+          
+     
     </section>
+
     <section id="social-media">
-      <div>
+      <div class="media-content">
         <h3>Social Media</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
           euismod bibendum laoreet.
         </p>
       </div>
-      <div>
+      <div class="icons">
         <img src="app/images/social-media/facebook-logo.svg" alt="facebook" />
         <img src="app/images/social-media/instagram-logo.svg" alt="instagram" />
         <img src="app/images/social-media/pinterest.svg" alt="pinterest" />
         <img src="app/images/social-media/twitter.svg" alt="twitter" />
+        <a href=""><i class="fa-solid fa-rss"></i></a>
       </div>
     </section>
+
+
     <section id="tabs">
-      <div>
-        <p>REGISTER</p>
-        <p>APPLY</p>
-        <p>RECEIVE</p>
+      <div class="tabs">
+        <p><span>REGISTER</span> </p>
+        <p><span>APPLY</span> </p>
+        <p><span>RECEIVE</span> </p>
       </div>
-      <div>
+      <div class="tab-content">
         <h3>
           Tabs with soft transitioning effect. Explained propriety of out
           perpetual his you.
@@ -106,24 +121,20 @@
           euismod bibendum laoreet.
         </p>
       </div>
-      <div>
-        <img
-          src="app/images/tabs/photo-1493409137604-0901c55e4456.png"
-          alt="image1"
-        />
-        <img
-          src="app/images/tabs/photo-1543364195-bfe6e4932397.png"
-          alt="image2"
-        />
-        <img
-          src="app/images/tabs/photo-1448387473223-5c37445527e7@2x.png"
-          alt="image3"
-        />
-      </div>
+      
+     <div class="container1">
+        <div class="block1"><p>Explore</p></div>
+        <div class="block2"><p>Explore</p></div>
+        <div class="block3"><p>Explore</p></div>
+     </div>
     </section>
-    <section id="black-section">
-      <img src="app/images/cheshire-county-hygiene-services.svg" alt="logo" />
-      <div>
+
+
+
+    
+    <section id="about">
+      <img class="logo" src="app/images/cheshire-county-hygiene-services.svg" alt="logo" />
+      <div class="about-right">
         <h2>Erat tempor tempus erat malesuada</h2>
         <img src="app/images/divider_orange_u7 copy 4.svg" alt="devider" />
         <p>
@@ -131,27 +142,51 @@
           euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan
           et viverra justo commodo.
         </p>
-        <h5>Title</h5>
+        <div class="about-content">
+          <span>
+            <i class="fa-regular fa-eye"></i>
+          </span>
+          <div>
+            <h5>Title</h5>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
           euismod bibendum laoreet.
         </p>
-        <h5>Title</h5>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-          euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan
-          et viverra justo commodo.
-        </p>
       </div>
+      </div>
+
+        <div class="about-content">
+          <span>
+            <i class="fa-regular fa-comment"></i>
+          </span>
+          <div>
+            <h5>Title</h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+            euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan
+            et viverra justo commodo.
+          </p>
+          </div>
+      </div>
+      </div>
+        
+     
     </section>
+
+
+
+
+
+
     <section id="white-section">
-      <div>
+      <div class="awesome">
         <h2>WHY THIS IS AWESOME</h2>
         <img src="app/images/divider_orange_u7 copy 3.svg" alt="" />
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
       <div class="display">
         <div>
+          <i class="fa-solid fa-medal"></i>
           <h3>Thoughtful Design</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
@@ -159,6 +194,7 @@
           </p>
         </div>
         <div>
+          <i class="fa-solid fa-spa"></i>
           <h3>Well Crafted</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit Aenean
@@ -166,11 +202,18 @@
           </p>
         </div>
         <div>
+         <i class="fa-brands fa-cc-visa"></i>
           <h3>Easy to Customize</h3>
           <p>Proin gravida dolor sit amet lacus accumsan et viverra.</p>
         </div>
       </div>
     </section>
+
+
+
+
+
+
     <section id="pricing">
       <div>
         <h2>PRICING OPTIONS</h2>
@@ -179,27 +222,65 @@
       </div>
       <div></div>
     </section>
+
+
+
+
+
+
+
+
+    
     <section id="reviews">
       <h1>WHAT OUR CUSTOMERS ARE SAYING</h1>
       <img src="app/images/divider_orange_u7 copy.svg" alt="" />
     </section>
-    <script src="script.js"></script>
     <!-- Swiper -->
     <section id="contact">
-      <div>
+     
         <h1>CONTACT US</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <!-- Form -->
-      </div>
+        
+        <form action="#">    
+         
+          <input type="text" class="name" placeholder="First name" title="Write here your first name" >
+          <input type="text" class="name" placeholder="Last name" title="Write here your last name" >
+          <input type="number" class="phone-number" placeholder="Phone number" title="Write here your phone number" >
+   
+          <div  class="radio-btn" > 
+            <input
+            class="radio-btn"
+          id="personal"
+          type="radio"
+          value="personal"
+          name="message"
+          checked
+        />
+        <label for="personal">PERSONAL</label>
+
+        <input class="radio-btn" id="company" type="radio" value="company" name="message" />
+        <label for="company">COMPANYy</label>
+        </div>
+        <input type="submit" value="Send" />
+        
+        </form>
+     
+      
     </section>
     <footer>
-      <div>
+      <div class="footer-icons">
         <img src="app/images/social-media/facebook-logo.svg" alt="" />
         <img src="app/images/social-media/instagram-logo.svg" alt="" />
         <img src="app/images/social-media/pinterest.svg" alt="" />
         <img src="app/images/social-media/twitter.svg" alt="" />
+        <a href=""><i class="fa-solid fa-rss"></i></a>
       </div>
-      <h2>© 2019 Cheshire County</h2>
+      <p>© 2022 Justyna Jančis<p>
     </footer>
+        <!-- Swiper js cdn -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <!-- Custom js -->
+    <script src="script.js"></script>
   </body>
 </html>

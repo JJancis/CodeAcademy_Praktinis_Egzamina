@@ -1,5 +1,28 @@
 #social-media {
   display: flex;
   background: #ffffff;
-  height: 105px;
+  width: 1400px;
+  height: auto;
+
+  padding: 0 150px;
+  align-items: center;
+  justify-content: space-between;
+
+  .media-content {
+    width: 45%;
+    h3 {
+      color: #333333;
+      margin: 20px 0 5px 0;
+    }
+    p {
+      color: #86878b;
+      line-height: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  .icons {
+    display: flex;
+    gap: 90px;
+    height: 30px;
+  }
 }

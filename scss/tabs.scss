@@ -1,7 +1,125 @@
 #tabs {
+  position: relative;
   display: flex;
   background-image: url(../images/christoffer-engstrom-503481-unsplash.png);
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
-  height: 595px;
+  height: auto;
+  align-items: center;
+  padding: 120px 150px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(
+        270deg,
+        rgba(101, 149, 226, 0.4),
+        rgba(226, 120, 101, 0.4)
+      ),
+      url("../images/mountains.png");
+  }
+  .tabs p {
+    position: relative;
+    background: #a37169;
+    padding: 20px;
+    margin: 20px 0;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 3px 6px #00000029;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    span {
+      rotate: -45deg;
+      color: #ffffff;
+      opacity: 0.5;
+    }
+    &:hover {
+      background: #e27866;
+      cursor: pointer;
+    }
+    &:hover span {
+      color: #ffffff;
+      opacity: 1;
+    }
+  }
+  .tab-content {
+    max-width: 520px;
+    margin: 0 70px 0 50px;
+    h3 {
+      position: relative;
+      font-size: 36px;
+      line-height: 40px;
+      margin-bottom: 30px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+    p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  .container1 {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    height: 370px;
+  }
+
+  .container1 > div {
+    font-size: 20px;
+    box-shadow: -3px 3px 20px #00000029;
+    border-radius: 3px;
+
+    p {
+      opacity: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 3px;
+      background-color: rgba($color: #e27866, $alpha: 0.8);
+    }
+    &:hover p {
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+  .block1 {
+    background-image: url(../images/tabs/photo-1493409137604-0901c55e4456.jpg);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    grid-row: 1 / 3;
+    grid-column: 1/ 3;
+  }
+
+  .block2 {
+    background-image: url(../images/tabs/photo-1543364195-bfe6e4932397.jpg);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    grid-row: 1 /3;
+    grid-column: 3 / 5;
+  }
+  .block3 {
+    background-image: url(../images/tabs/photo-1448387473223-5c37445527e7@2x.jpg);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    grid-row: 3 / 6;
+    grid-column: 1 / 5;
+  }
 }
