@@ -22,7 +22,20 @@
       ),
       url("../images/mountains.png");
   }
-  .tabs p {
+  .tabs {
+    position: relative;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+    border-radius: 25px 0 0 25px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+
+  .tabs .tab-header > div {
     position: relative;
     background: #a37169;
     padding: 20px;
@@ -31,95 +44,160 @@
     height: 100px;
     box-shadow: 0 3px 6px #00000029;
     border-radius: 3px;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 14px;
-    span {
-      rotate: -45deg;
-      color: #ffffff;
-      opacity: 0.5;
+  }
+  .tablinks p {
+    rotate: -45deg;
+    color: #ffffff;
+    opacity: 0.5;
+  }
+
+  .tablinks:before {
+    background: #e27866;
+    content: "";
+    width: 0px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    transition: 0.5s ease-in-out;
+  }
+  .tablinks:hover::before {
+    width: 100%;
+  }
+
+  .tablinks.active:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  .tablinks.active:hover::before {
+    width: 100%;
+  }
+
+  .tablinks.active p,
+  .tablinks.active:hover p {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+    opacity: 1;
+    letter-spacing: 1px;
+  }
+
+  .tabs .tab-content {
+    flex-basis: 100%;
+    position: relative;
+    .test {
+      display: flex;
     }
-    &:hover {
-      background: #e27866;
-      cursor: pointer;
-    }
-    &:hover span {
-      color: #ffffff;
-      opacity: 1;
+    & > div {
+      position: absolute;
+      top: 50vh;
+      left: 100px;
+      opacity: 0;
+      transition: opacity 200ms ease-in-out 0ms, left 800ms ease-in-out 0ms,
+        top 0ms ease-in-out 3000ms;
+      &.active {
+        top: 20px;
+        left: 50px;
+        text-align: left;
+        opacity: 1;
+        transition: opacity 200ms ease-in-out 0ms, left 800ms ease-in-out 0ms,
+          top 0ms ease-in-out 0ms;
+      }
+      h3 {
+        max-width: 510px;
+        font-size: 36px;
+        line-height: 40px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        font-weight: 600;
+      }
+      p {
+        max-width: 1400px;
+        font-size: 14px;
+        line-height: 20px;
+      }
     }
   }
-  .tab-content {
-    max-width: 520px;
-    margin: 0 70px 0 50px;
-    h3 {
-      position: relative;
-      font-size: 36px;
-      line-height: 40px;
-      margin-bottom: 30px;
-      font-weight: 600;
-      color: #ffffff;
-    }
-    p {
-      font-size: 14px;
-      line-height: 20px;
-    }
-  }
+
   .container1 {
     position: relative;
     display: grid;
+    margin-left: 50px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 20px;
     width: 100%;
-    height: 370px;
-  }
-
-  .container1 > div {
-    font-size: 20px;
-    box-shadow: -3px 3px 20px #00000029;
-    border-radius: 3px;
-
-    p {
-      opacity: 0;
-      display: grid;
-      place-items: center;
+    height: 340px;
+    & > div {
+      box-shadow: -3px 3px 20px #00000029;
       border-radius: 3px;
-      background-color: rgba($color: #e27866, $alpha: 0.8);
+
+      p {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        display: grid;
+        place-items: center;
+        border-radius: 3px;
+        background-color: rgba($color: #e27866, $alpha: 0.8);
+      }
+      &:hover p {
+        font-size: 20px;
+        opacity: 1;
+        cursor: pointer;
+      }
     }
-    &:hover p {
-      width: 100%;
-      height: 100%;
-      opacity: 1;
-      cursor: pointer;
+
+    .block1 {
+      background-image: url(../images/tabs/photo-1493409137604-0901c55e4456.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      grid-row: 1 / 3;
+      grid-column: 1/ 3;
     }
-  }
-  .block1 {
-    background-image: url(../images/tabs/photo-1493409137604-0901c55e4456.jpg);
+    .block2 {
+      background-image: url(../images/tabs/photo-1543364195-bfe6e4932397.jpg);
 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    grid-row: 1 / 3;
-    grid-column: 1/ 3;
-  }
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      grid-row: 1 /3;
+      grid-column: 3 / 5;
+    }
+    .block3 {
+      background-image: url(../images/tabs/photo-1448387473223-5c37445527e7@2x.jpg);
 
-  .block2 {
-    background-image: url(../images/tabs/photo-1543364195-bfe6e4932397.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      grid-row: 3 / 6;
+      grid-column: 1 / 5;
+    }
+    .block4 {
+      background-image: url(https://images.unsplash.com/photo-1664465921013-1ee3b2759573?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      grid-row: 1 / 6;
+      grid-column: 1/ 5;
+    }
 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    grid-row: 1 /3;
-    grid-column: 3 / 5;
-  }
-  .block3 {
-    background-image: url(../images/tabs/photo-1448387473223-5c37445527e7@2x.jpg);
+    .block5 {
+      background-image: url(../images/tabs/photo-1448387473223-5c37445527e7@2x.jpg);
 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    grid-row: 3 / 6;
-    grid-column: 1 / 5;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      grid-row: 1 / 6;
+      grid-column: 1 / 5;
+    }
   }
 }

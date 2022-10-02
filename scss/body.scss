@@ -1,5 +1,9 @@
 body {
   max-width: 1400px;
   margin: 0 auto;
+  height: 100%;
   color: #ffffff;
+  .body-shadow {
+    box-shadow: 0 10px 10px #00000029;
+  }
 }

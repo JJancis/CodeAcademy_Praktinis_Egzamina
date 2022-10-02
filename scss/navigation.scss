@@ -1,38 +1,37 @@
 nav {
-  position: fixed;
-  top: 0;
   max-width: 1400px;
   width: 100%;
-  padding: 10px 150px;
+  height: auto;
+  position: fixed;
+  top: 0;
   background: #1c1c1c;
   box-shadow: 0 10px 6px #00000029;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 150px;
   font-size: 15px;
-  z-index: 3;
+  z-index: 2;
 
-  #burger {
-    display: none;
-    cursor: pointer;
-    transition: 0.3s;
+  img {
+    min-width: 100px;
+
+    margin-right: 20px;
   }
 
-  a:not(.brand) {
+  a {
     position: relative;
     color: rgba($color: #ffffff, $alpha: 0.69);
-    margin: 0 0 0 55px;
     transition: 0.3s;
     transition-delay: 0.1s;
-
     &:hover {
       color: #ffffff;
     }
-    &:not(.brand)::before {
+    &::before {
       content: "";
       position: absolute;
       left: -25px;
-      bottom: -28px;
+      bottom: -27px;
       width: calc(100% + 55px);
       height: 0%;
       background: #e48676;
@@ -41,6 +40,90 @@ nav {
     }
     &:hover::before {
       height: 15%;
+    }
+  }
+
+  .selected {
+    &::before {
+      content: "";
+      position: absolute;
+      left: -25px;
+      bottom: -27px;
+      width: calc(100% + 55px);
+      height: 0%;
+      background: #e48676;
+      z-index: -1;
+      transition: 0.3s;
+      height: 15%;
+    }
+  }
+
+  .rotate {
+    transform: rotate(-90deg);
+  }
+
+  #burger {
+    color: #e27866;
+    cursor: pointer;
+    display: none;
+    transition: 0.3s;
+  }
+
+  .links {
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    line-height: 55px;
+    #logo {
+      width: 100px;
+    }
+
+    #burger {
+      display: block;
+    }
+
+    .links {
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      height: auto;
+      background: #1c1c1c;
+      padding-bottom: 20px;
+      z-index: -1;
+      box-shadow: 0 3px 0 #e27866;
+      transform: translateY(-100%);
+      opacity: 0;
+      transition: 0.75s;
+    }
+
+    .open {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+
+    a,
+    .selected {
+      width: auto;
+      &::before {
+        left: 0;
+        bottom: 10px;
+        width: 100%;
+      }
+      &:hover::before {
+        height: 5%;
+      }
+    }
+    .selected {
+      &::before {
+        height: 5%;
+      }
     }
   }
 }
