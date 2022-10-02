@@ -1,4 +1,137 @@
 #pricing {
   background: #6696e2;
-  height: 883px;
+  height: auto;
+  padding: 0 150px;
+  .swiper-slide {
+    align-self: flex-end;
+  }
+  .pricing-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    h2 {
+      font-size: 36px;
+    }
+    img {
+      width: 65px;
+      height: 2px;
+      margin: 25px 0;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  .plan {
+    width: 320px;
+    margin: 70px auto 100px;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px #00000029;
+    overflow: hidden;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 10px #41d395;
+    }
+    .plan-header {
+      background: #333;
+      color: #ffffff;
+      padding: 15px 0 20px 0;
+      h3 {
+        font-size: 20px;
+        text-align: center;
+        font-weight: normal;
+      }
+      .price {
+        font-size: 90px;
+        margin: 15px 0;
+        font-weight: normal;
+        span {
+          font-size: 40px;
+          margin-right: 5px;
+        }
+      }
+      p {
+        color: #ffffff;
+        opacity: 0.5;
+        font-size: 14px;
+      }
+    }
+
+    .plan-green-line {
+      background: #41d395;
+      border: 5px solid #41d395;
+      color: #ffffff;
+      line-height: 30px;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        background: #ffffff;
+        color: #86878b;
+        font-size: 14px;
+        padding: 10px 0;
+      }
+    }
+  }
+}
+
+/*  Swiper css */
+body {
+  height: 100vh;
+}
+.swiper {
+  width: 600px;
+  text-align: center;
+  margin-top: 20px;
+}
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+.swiper-slide {
+  width: 350px;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: #41d395;
+  transition: 0.3s;
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #ffffff;
+  text-shadow: 0 5px 5px #41d395;
+  transform: scale(1.2);
+}
+.swiper-pagination {
+  position: relative;
+  margin-bottom: 20px;
+}
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background: transparent;
+  border: 3px solid #41d395;
+  transition: 0.3s;
+}
+.swiper-pagination-bullet-active {
+  background: #41d395;
+  transform: scale(1.3);
+}
+@media (min-width: 1000px) {
+  .swiper {
+    width: 100%;
+    max-width: 1400px;
+  }
+  .plan {
+    width: 20vw;
+    max-width: 350px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
 }

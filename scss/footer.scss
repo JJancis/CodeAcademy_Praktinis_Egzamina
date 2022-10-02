@@ -3,12 +3,12 @@ footer {
   align-items: center;
   justify-content: space-between;
   background: #1c1c1c;
-  padding: 0 100px;
   position: relative;
+
   p {
     position: absolute;
     right: 150px;
-    font-size: 20px;
+    font-size: 18px;
     color: #ffffff;
     opacity: 0.5;
   }
@@ -22,8 +22,8 @@ footer {
   opacity: 0.653;
 }
 .footer-icons {
-  transform: scale(0.75);
+  transform: scale(0.6);
   display: flex;
-  gap: 80px;
-  padding: 20px 0;
+  gap: 150px;
+  padding: 20px 20px;
 }
