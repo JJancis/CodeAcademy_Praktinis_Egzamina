@@ -1,7 +1,7 @@
 nav {
   max-width: 1400px;
   width: 100%;
-  height: auto;
+  height: 74px;
   position: fixed;
   top: 0;
   background: #1c1c1c;
@@ -14,9 +14,8 @@ nav {
   z-index: 2;
 
   img {
-    min-width: 100px;
-
-    margin-right: 20px;
+    min-width: 105px;
+    margin-right: 50px;
   }
 
   a {
@@ -34,7 +33,7 @@ nav {
       bottom: -27px;
       width: calc(100% + 55px);
       height: 0%;
-      background: #e48676;
+      background: #41d395;
       z-index: -1;
       transition: 0.3s;
     }
@@ -44,6 +43,7 @@ nav {
   }
 
   .selected {
+    color: rgba($color: #ffffff, $alpha: 1);
     &::before {
       content: "";
       position: absolute;
@@ -73,57 +73,5 @@ nav {
     width: 600px;
     display: flex;
     justify-content: space-between;
-  }
-}
-@media (max-width: 768px) {
-  nav {
-    line-height: 55px;
-    #logo {
-      width: 100px;
-    }
-
-    #burger {
-      display: block;
-    }
-
-    .links {
-      flex-direction: column;
-      align-items: center;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      height: auto;
-      background: #1c1c1c;
-      padding-bottom: 20px;
-      z-index: -1;
-      box-shadow: 0 3px 0 #e27866;
-      transform: translateY(-100%);
-      opacity: 0;
-      transition: 0.75s;
-    }
-
-    .open {
-      transform: translateY(0%);
-      opacity: 1;
-    }
-
-    a,
-    .selected {
-      width: auto;
-      &::before {
-        left: 0;
-        bottom: 10px;
-        width: 100%;
-      }
-      &:hover::before {
-        height: 5%;
-      }
-    }
-    .selected {
-      &::before {
-        height: 5%;
-      }
-    }
   }
 }

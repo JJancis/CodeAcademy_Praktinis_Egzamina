@@ -1,15 +1,14 @@
 #social-media {
   display: flex;
   background: #ffffff;
-  width: 1400px;
+  max-width: 1400px;
   height: auto;
-
   padding: 0 150px;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 
   .media-content {
-    width: 45%;
+    width: 40%;
     h3 {
       color: #333333;
       margin: 20px 0 5px 0;
@@ -17,12 +16,16 @@
     p {
       color: #86878b;
       line-height: 20px;
+      margin-right: 10px;
       margin-bottom: 20px;
     }
   }
   .icons {
+    max-width: 500px;
+    width: 100%;
+
     display: flex;
-    gap: 90px;
+    justify-content: space-between;
     height: 30px;
   }
 }

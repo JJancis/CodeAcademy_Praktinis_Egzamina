@@ -1,18 +1,21 @@
 #white-section {
   height: auto;
   background: #ffffff;
-
   color: #212121;
   padding: 100px 150px;
   .awesome {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     h2 {
       font-size: 36px;
       line-height: 43px;
     }
-    img {
+    .coral-devider {
+      margin: 0 50%;
       width: 65px;
-      height: 2px;
+      border: 1px solid #e27866;
+      background: #e27866;
       margin: 25px 0;
     }
     p {
@@ -29,6 +32,10 @@
     text-align: center;
     margin-top: 65px;
     gap: 100px;
+    & > div {
+      align-self: flex-start;
+    }
+
     h3 {
       color: #333333;
       font-size: 20px;

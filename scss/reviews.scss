@@ -29,7 +29,8 @@
     }
 
     .reviews {
-      max-width: 280px;
+      max-width: 270px;
+      min-width: 240px;
       width: 100%;
       background: #6696e2;
       color: #ffffff;
@@ -59,7 +60,7 @@
           content: "";
           position: absolute;
           top: -4%;
-          right: 86%;
+          right: 75%;
           border: 15px solid transparent;
           border-top-color: #6696e2;
         }
@@ -108,11 +109,5 @@
     color: #ffffff;
     text-shadow: 0 5px 5px #e27866;
     transform: scale(1.1);
-  }
-}
-@media (max-width: 1000px) {
-  #reviews .swiper-slide {
-    position: relative;
-    left: 22%;
   }
 }

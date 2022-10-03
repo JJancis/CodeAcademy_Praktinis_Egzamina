@@ -3,11 +3,19 @@ footer {
   align-items: center;
   justify-content: space-between;
   background: #1c1c1c;
-  position: relative;
+  padding: 20px 150px;
+  .footer-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
 
+    i {
+      font-size: 25px;
+    }
+  }
   p {
-    position: absolute;
-    right: 150px;
+    text-align: end;
+    width: 30%;
     font-size: 18px;
     color: #ffffff;
     opacity: 0.5;
@@ -20,10 +28,9 @@ footer {
   font-size: 2em;
   color: #e27866;
   opacity: 0.653;
-}
-.footer-icons {
-  transform: scale(0.6);
-  display: flex;
-  gap: 180px;
-  padding: 20px 20px;
+  &:hover {
+    color: #ffffff;
+    opacity: 0.6;
+    text-shadow: 0 0 6px #e27866;
+  }
 }
