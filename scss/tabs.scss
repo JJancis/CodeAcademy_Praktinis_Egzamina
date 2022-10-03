@@ -39,7 +39,7 @@
     border-radius: 3px;
     cursor: pointer;
     @include flex-center;
-    font-size: 14px;
+    font-size: $size14;
   }
   .tablinks p {
     rotate: -45deg;
@@ -103,16 +103,16 @@
       }
       h3 {
         max-width: 510px;
-        font-size: 36px;
-        line-height: 40px;
+        font-size: $size25;
+        line-height: $lineH40;
         margin-top: 20px;
         margin-bottom: 30px;
         font-weight: 600;
       }
       p {
         max-width: 1400px;
-        font-size: 14px;
-        line-height: 20px;
+        font-size: $size14;
+        line-height: $lineH20;
       }
     }
   }

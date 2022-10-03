@@ -16,6 +16,16 @@
     position: relative;
     left: 28%;
   }
+  #tabs {
+    padding: 60px 75px;
+    .tab-content > div h3 {
+      font-size: $size20 !important;
+    }
+    .tab-content > div p {
+      font-size: $size10 !important;
+      line-height: $lineH20;
+    }
+  }
 }
 @media (min-width: 820px) and (max-width: 1060px) {
   nav {
@@ -224,6 +234,61 @@
     }
     .icons {
       max-width: 100%;
+    }
+  }
+  #tabs {
+    .tabs .tab-header > div {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin: 35px 0px 15px 0px;
+    }
+
+    .tabs {
+      flex-direction: column;
+      display: flex;
+      height: 700px;
+      top: 350px;
+
+      .tab-header {
+        margin-left: 0px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .tab-content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        right: 12%;
+
+        .test {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          .content-text {
+            padding: 0px;
+            display: flex;
+            flex-flow: row wrap;
+          }
+          .container1 {
+            display: inline-flex;
+            margin-top: 50px;
+            margin-left: 0;
+            height: 150px;
+            .block4 {
+              height: 350px;
+            }
+            div {
+              width: 100%;
+            }
+          }
+        }
+      }
     }
   }
   #about {
