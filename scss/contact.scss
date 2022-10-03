@@ -1,22 +1,20 @@
 #contact {
-  display: flex;
+  @include flex-center;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: #e27866;
-  color: #ffffff;
-  height: auto;
+  background: $peach;
+  color: $white;
+  @include section-h-w;
   text-align: center;
   padding: 0 150px;
 
   h1 {
     padding-top: 70px;
-    font-size: 36px;
+    font-size: $size36;
     font-weight: 600;
   }
   p {
     padding: 50px 0 30px 0;
-    font-size: 14px;
+    font-size: $size14;
   }
 
   form {
@@ -27,16 +25,16 @@
     display: flex;
     padding: 0 65px 30px 65px;
     flex-direction: column;
-    background: #ffffff;
-    box-shadow: 0 10px 10px #00000029;
-    color: black;
+    background: $white;
+    box-shadow: $box-shadow;
+    color: $black;
     border-radius: 5px;
     margin-bottom: 50px;
     input {
       outline: none;
       border: none;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-      font-size: 14px;
+      border-bottom: 1px solid rgba($color: $black, $alpha: 0.5);
+      font-size: $size14;
       padding-bottom: 5px;
       margin-top: 30px;
       &::-webkit-input-placeholder {
@@ -52,15 +50,15 @@
         display: flex;
         width: 15px;
         height: 15px;
-        border: 1px solid #41d395;
+        border: 1px solid $aquaGreen;
         border-radius: 100%;
         position: relative;
         transition: background 0.5s;
         label {
           display: flex;
-          color: #00000080;
+          color: rgba($color: $black, $alpha: 0.5);
 
-          font-size: 10px;
+          font-size: $size10;
           font-weight: 600;
           margin-left: 5px;
           transition: color 0.5s;
@@ -73,7 +71,7 @@
             bottom: 0;
             right: 0;
             transform: scale(0);
-            background: #41d395;
+            background: $aquaGreen;
             border-radius: 100%;
             transition: 0.5s;
           }
@@ -81,7 +79,7 @@
             transform: scale(0.6);
           }
           input:checked ~ .mark {
-            color: #000000;
+            color: $black;
             opacity: 1;
             font-weight: 700;
           }
@@ -95,19 +93,19 @@
       min-width: 80px;
       width: 65%;
       height: 50px;
-      background: #41d395;
+      background: $aquaGreen;
       border-radius: 5px;
-      border: 1px solid #41d395;
-      color: #ffffff;
-      font-size: 15px;
+      border: 1px solid $aquaGreen;
+      color: $white;
+      font-size: $size14;
       text-transform: uppercase;
       font-weight: 600;
       padding: 15px;
       transition: 0.3s;
       &:hover {
         transform: scale(1.1);
-        background: #e27866;
-        border: 1px solid #e27866;
+        background: $peach;
+        border: 1px solid $peach;
       }
     }
   }

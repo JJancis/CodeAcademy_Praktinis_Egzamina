@@ -1,20 +1,18 @@
 #social-media {
-  display: flex;
-  background: #ffffff;
+  @include flex-center-vertical-space-btw;
+  background: $white;
   max-width: 1400px;
-  height: auto;
+  @include section-h-w;
   padding: 0 150px;
-  justify-content: space-between;
-  align-items: center;
 
   .media-content {
     width: 40%;
     h3 {
-      color: #333333;
+      color: $darkGrey;
       margin: 20px 0 5px 0;
     }
     p {
-      color: #86878b;
+      color: $grey;
       line-height: 20px;
       margin-right: 10px;
       margin-bottom: 20px;
@@ -23,9 +21,7 @@
   .icons {
     max-width: 500px;
     width: 100%;
-
-    display: flex;
-    justify-content: space-between;
+    @include flex-space-btw;
     height: 30px;
   }
 }

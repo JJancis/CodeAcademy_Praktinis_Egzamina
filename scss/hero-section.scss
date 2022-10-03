@@ -1,14 +1,11 @@
 #hero-section {
   background-image: url(../images/photo-1480714378408-67cf0d13bc1b.png);
-  display: flex;
+  @include flex-center-vertical;
+  @include section-h-w;
+  @include background-repeat-position-center-size-cover;
   position: relative;
   top: 0;
-  width: 100%;
-  height: auto;
   padding: 150px;
-  align-items: center;
-  background-position: center;
-  background-size: cover;
 
   &::before {
     content: "";
@@ -17,7 +14,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba($color: #1c1c1c, $alpha: 0.6);
+    background-color: rgba($color: $granite, $alpha: 0.6);
   }
 
   .content {
@@ -28,37 +25,37 @@
       margin-bottom: 20px;
     }
     h1 {
-      font-size: 36px;
-      line-height: 44px;
+      font-size: $size36;
+      line-height: $lineH40;
       width: 70%;
       font-weight: 600;
     }
     .white-devider {
-      border: 1px solid #ffffff;
+      border: 1px solid $white;
       width: 85px;
-      background: #ffffff;
+      background: $white;
       margin: 30px 0;
     }
     p {
-      font-size: 16px;
-      line-height: 23px;
-      color: #ffffff;
+      font-size: $size14;
+      line-height: $lineH20;
+      color: $white;
       opacity: 0.8;
       font-weight: 500;
     }
 
     button {
       background: transparent;
-      border: 2px solid #ffffff;
-      color: #ffffff;
+      border: 2px solid $white;
+      color: $white;
       margin-top: 40px;
       width: 135px;
       height: 40px;
       transition: 0.3s;
 
       &:hover {
-        color: #e48676;
-        border: 3px solid #e48676;
+        color: $peach;
+        border: 3px solid $peach;
         cursor: pointer;
       }
     }
@@ -67,25 +64,24 @@
     position: relative;
     max-width: 360px;
     width: 100%;
-    display: flex;
+    @include flex-center-vertical;
     flex-direction: column;
-    align-items: center;
-    background-color: #ffffff;
+    background-color: $white;
     border-radius: 5px;
     margin-left: 100px;
-    color: #1c1c1c;
+    color: $granite;
 
     h3 {
       text-align: center;
       width: 100%;
       padding: 20px 0;
-      font-size: 20px;
-      background: #f5f5f5;
-      color: #333333;
+      font-size: $size20;
+      background: $white;
+      color: $darkGrey;
       border-radius: 5px 5px 0 0;
 
       span {
-        color: #e48676;
+        color: $peach;
       }
     }
     p {
@@ -98,7 +94,7 @@
     form {
       min-width: 300px;
       max-width: 360px;
-      width: 100%;
+      @include section-h-w;
       padding: 0 50px;
       display: flex;
       flex-direction: column;
@@ -106,13 +102,13 @@
       input {
         outline: none;
         border: none;
-        border-bottom: 1px solid #d8d8d8;
+        border-bottom: 1px solid $lightGrey;
         padding-bottom: 5px;
         margin-top: 30px;
-        font-size: 13px;
+        font-size: $size14;
         &::-webkit-input-placeholder {
           padding-left: 10px;
-          color: #d8d8d8;
+          color: $lightGrey;
         }
       }
 
@@ -124,16 +120,15 @@
           display: flex;
           width: 15px;
           height: 15px;
-          border: 1px solid #41d395;
+          border: 1px solid $aquaGreen;
           border-radius: 100%;
           position: relative;
           transition: background 0.5s;
 
           label {
             display: flex;
-            color: #00000080;
-
-            font-size: 10px;
+            color: rgba($color: $black, $alpha: 0.5);
+            font-size: $size10;
             font-weight: 600;
             margin-left: 5px;
             transition: color 0.5s;
@@ -146,7 +141,7 @@
               bottom: 0;
               right: 0;
               transform: scale(0);
-              background: #41d395;
+              background: $aquaGreen;
               border-radius: 100%;
               transition: 0.5s;
             }
@@ -154,7 +149,7 @@
               transform: scale(0.6);
             }
             input:checked ~ .mark {
-              color: #000000;
+              color: $black;
               opacity: 1;
               font-weight: 700;
             }
@@ -165,25 +160,25 @@
     .form-submit {
       width: 100%;
       padding: 15px;
-      font-size: 18px;
+      font-size: $size20;
       border: 1px solid transparent;
       background-image: none;
-      background-color: #41d395;
-      color: #ffffff;
+      background-color: $aquaGreen;
+      color: $white;
       border-radius: 0 0 5px 5px;
       margin-top: 40px;
       transition: 0.3s;
     }
     .form-submit:hover {
       cursor: pointer;
-      background-color: #e48676;
+      background-color: $peach;
     }
   }
 }
 .alert {
-  font-size: 10px;
+  font-size: $size10;
   font-weight: 600;
-  color: #e27866;
+  color: $peach;
   margin-top: 5px;
   padding: 0;
 }

@@ -1,11 +1,8 @@
 #about {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: white;
-  background: #1c1c1c;
-  height: auto;
-  width: 100%;
+  @include flex-center-vertical-space-btw;
+  color: $white;
+  background: $granite;
+  @include section-h-w;
   padding: 100px 150px;
   .logo {
     min-width: 45%;
@@ -14,18 +11,17 @@
   .about-right {
     margin-left: 150px;
     h2 {
-      font-size: 30px;
-      line-height: 40px;
+      font-size: $size30;
+      line-height: $lineH40;
       width: 70%;
     }
     img {
       margin: 30px 0;
       width: 200px;
-      height: 2px;
     }
     p {
-      font-size: 14px;
-      line-height: 20px;
+      font-size: $size14;
+      line-height: $lineH20;
       margin-bottom: 40px;
     }
     h5 {
@@ -35,21 +31,19 @@
       display: flex;
       span {
         margin-top: 5%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
         height: 50px;
         width: 50px;
         padding: 15px;
         border-radius: 100%;
-        background: #e27866;
-        border: 1px solid #e27866;
+        background: $peach;
+        border: 1px solid $peach;
         margin-right: 25px;
       }
       .fa-eye,
       .fa-comment {
-        font-size: 20px;
-        color: white;
+        font-size: $size20;
+        color: $white;
       }
     }
   }

@@ -1,9 +1,8 @@
 body {
-  max-width: 1400px;
+  @include section-h-w;
   margin: 0 auto;
-  height: 100%;
-  color: #ffffff;
+  color: $white;
   .body-shadow {
-    box-shadow: 0 10px 10px #00000029;
+    box-shadow: $box-shadow;
   }
 }

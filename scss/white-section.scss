@@ -1,34 +1,31 @@
 #white-section {
-  height: auto;
-  background: #ffffff;
-  color: #212121;
+  @include section-h-w;
+  background: $white;
+  color: $blackGrey;
   padding: 100px 150px;
   .awesome {
-    display: flex;
+    @include flex-center-vertical;
     flex-direction: column;
-    align-items: center;
     h2 {
-      font-size: 36px;
-      line-height: 43px;
+      font-size: $size36;
+      line-height: $lineH40;
     }
     .coral-devider {
       margin: 0 50%;
       width: 65px;
-      border: 1px solid #e27866;
-      background: #e27866;
+      border: 1px solid $peach;
+      background: $peach;
       margin: 25px 0;
     }
     p {
-      font-size: 14px;
-      line-height: 20px;
-      color: #86878b;
+      font-size: $size14;
+      line-height: $lineH20;
+      color: $grey;
     }
   }
 
   .display {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     text-align: center;
     margin-top: 65px;
     gap: 100px;
@@ -37,25 +34,25 @@
     }
 
     h3 {
-      color: #333333;
-      font-size: 20px;
-      line-height: 24px;
+      color: $darkGrey;
+      font-size: $size20;
+      line-height: $lineH20;
       margin: 35px 0;
     }
     p {
       max-width: 290px;
       width: 100%;
-      color: #86878b;
-      font-size: 14px;
-      line-height: 20px;
+      color: $grey;
+      font-size: $size14;
+      line-height: $lineH20;
     }
     i {
       text-align: center;
       width: 50px;
       height: 50px;
-      border: 1px solid #e27866;
+      border: 1px solid $peach;
       padding: 15px 0;
-      font-size: 20px;
+      font-size: $size20;
       border-radius: 100%;
     }
   }

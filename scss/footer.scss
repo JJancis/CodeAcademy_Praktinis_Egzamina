@@ -1,36 +1,32 @@
 footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #1c1c1c;
+  @include flex-center-vertical-space-btw;
+  background: $granite;
   padding: 20px 150px;
   .footer-icons {
-    display: flex;
-    justify-content: space-between;
+    @include flex-space-btw;
     width: 50%;
 
     i {
-      font-size: 25px;
+      font-size: $size25;
     }
   }
   p {
     text-align: end;
     width: 30%;
-    font-size: 18px;
-    color: #ffffff;
+    font-size: $size20;
+    color: $white;
     opacity: 0.5;
   }
 }
-
 .fa-solid,
 .fa-rss,
 .fa-brands {
-  font-size: 2em;
-  color: #e27866;
-  opacity: 0.653;
+  font-size: $size30;
+  color: $peach;
+  opacity: 0.6;
   &:hover {
-    color: #ffffff;
+    color: $white;
     opacity: 0.6;
-    text-shadow: 0 0 6px #e27866;
+    text-shadow: 0 0 6px $peach;
   }
 }

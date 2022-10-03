@@ -4,13 +4,11 @@ nav {
   height: 74px;
   position: fixed;
   top: 0;
-  background: #1c1c1c;
-  box-shadow: 0 10px 6px #00000029;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background: $granite;
+  box-shadow: $box-shadow;
+  @include flex-center-vertical-space-btw;
   padding: 10px 150px;
-  font-size: 15px;
+  font-size: $size14;
   z-index: 2;
 
   img {
@@ -20,11 +18,11 @@ nav {
 
   a {
     position: relative;
-    color: rgba($color: #ffffff, $alpha: 0.69);
+    color: rgba($color: $white, $alpha: 0.69);
     transition: 0.3s;
     transition-delay: 0.1s;
     &:hover {
-      color: #ffffff;
+      color: $white;
     }
     &::before {
       content: "";
@@ -33,7 +31,7 @@ nav {
       bottom: -27px;
       width: calc(100% + 55px);
       height: 0%;
-      background: #41d395;
+      background: $aquaGreen;
       z-index: -1;
       transition: 0.3s;
     }
@@ -43,7 +41,7 @@ nav {
   }
 
   .selected {
-    color: rgba($color: #ffffff, $alpha: 1);
+    color: rgba($color: $white, $alpha: 1);
     &::before {
       content: "";
       position: absolute;
@@ -51,7 +49,7 @@ nav {
       bottom: -27px;
       width: calc(100% + 55px);
       height: 0%;
-      background: #e48676;
+      background: $peach;
       z-index: -1;
       transition: 0.3s;
       height: 15%;
@@ -63,7 +61,7 @@ nav {
   }
 
   #burger {
-    color: #e27866;
+    color: $peach;
     cursor: pointer;
     display: none;
     transition: 0.3s;
@@ -71,7 +69,6 @@ nav {
 
   .links {
     width: 600px;
-    display: flex;
-    justify-content: space-between;
+    @include flex-space-btw;
   }
 }

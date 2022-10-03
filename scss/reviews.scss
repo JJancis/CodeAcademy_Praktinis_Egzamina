@@ -1,22 +1,21 @@
 #reviews {
-  height: auto;
-  color: black;
+  @include section-h-w;
+  color: $black;
   padding: 0 150px;
 
   .reviews-header {
-    display: flex;
+    @include flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
     padding-top: 70px;
     h1 {
-      font-size: 36px;
+      font-size: $size36;
     }
 
     .blue-line {
       width: 65px;
-      background: #6696e2;
-      border: 1px solid #6696e2;
+      background: $skyBlue;
+      border: 1px solid $skyBlue;
       margin: 30px auto 70px;
     }
   }
@@ -32,20 +31,19 @@
       max-width: 270px;
       min-width: 240px;
       width: 100%;
-      background: #6696e2;
-      color: #ffffff;
+      background: $skyBlue;
+      color: $white;
       padding: 20px;
       border-radius: 10px;
       text-align: start;
-      box-shadow: 0 0 6px #00000029;
+      box-shadow: $box-shadow;
       &:hover {
-        box-shadow: 0px 0px 6px #e27866;
+        box-shadow: 0px 0px 6px $peach;
       }
     }
     .profile-box {
-      display: flex;
+      @include flex-center-vertical;
       justify-content: flex-start;
-      align-items: center;
       position: relative;
 
       .profile-image {
@@ -62,23 +60,23 @@
           top: -4%;
           right: 75%;
           border: 15px solid transparent;
-          border-top-color: #6696e2;
+          border-top-color: $skyBlue;
         }
       }
       .profile-info {
         margin-top: 20px;
         h4 {
-          color: #333333;
+          color: $darkGrey;
           padding: 5px 15px;
           text-align: left;
-          font-size: 20px;
+          font-size: $size20;
           font-weight: normal;
         }
         p {
           font-weight: normal;
-          font-size: 14px;
-          background: #ffffff;
-          color: #86878b;
+          font-size: $size14;
+          background: $white;
+          color: $grey;
           padding: 0px 15px;
         }
       }
@@ -91,23 +89,23 @@
   }
   .swiper-pagination-bullet {
     background: transparent;
-    border: 3px solid #e27866;
+    border: 3px solid $peach;
     width: 10px;
     height: 10px;
     transition: 0.3s;
   }
   .swiper-pagination-bullet-active {
-    background: #e27866;
+    background: $peach;
   }
   .swiper-button-prev,
   .swiper-button-next {
-    color: #e27866;
+    color: $peach;
     transition: 0.3s;
   }
   .swiper-button-prev:hover,
   .swiper-button-next:hover {
-    color: #ffffff;
-    text-shadow: 0 5px 5px #e27866;
+    color: $white;
+    text-shadow: 0 5px 5px $peach;
     transform: scale(1.1);
   }
 }

@@ -1,3 +1,4 @@
+// Swiper
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   direction: "horizontal",
@@ -78,7 +79,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
-///
+///Form
 const contactForm = document.getElementById("contactForm");
 contactForm.addEventListener("submit", function (event) {
   validateForm(event);
